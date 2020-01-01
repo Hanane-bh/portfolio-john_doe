@@ -1,0 +1,430 @@
+*{
+    -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    outline: none;
+}
+
+html
+{
+    font-size: 62.5%;
+}
+
+
+body
+{
+    background-image: url(../img/fond.png);
+    font-family: 'Bree Serif', serif;  
+    font-size: 1.8rem;
+    line-height: 2;
+    color: #989898;   
+}
+
+.container
+{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.clear
+{
+    clear: both;
+}
+
+h1::before, h1::after, h2::before, h2::after
+{
+    content:' - ';
+}
+
+a 
+{
+	text-decoration: none;
+	color: rgba(246, 36, 89,1);
+	transition: all 0.3s ease 0s;	
+}
+
+img 
+{
+	max-width: 100%;
+}
+
+
+
+/*************** HEADER *********************/
+
+header
+{
+    padding: 50px;
+}
+
+header > a
+{
+    font-size: 4rem; 
+} 
+
+header img
+{
+    width: 50px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s ease 0s;
+}
+
+header > a:hover img 
+{
+	-webkit-transform: scale(1.3);
+	-ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+header a
+{
+    color: #989898;
+    display: inline-block;
+    text-align: center;
+}
+
+header a:hover
+{
+    color: rgba(246, 36, 89,1);
+}
+
+header nav
+{
+    float: right;
+}
+
+header nav a:hover 
+{
+	-webkit-transform: translate(0, 10px);
+	-ms-transform: translate(0, 10px);
+    transform: translate(0, 10px);  
+}
+
+header nav a 
+{
+    padding: 0 50px;
+    font-size: 2rem;
+}
+
+header nav .fas
+{
+    display: block!important;
+    padding: 10px;
+}
+
+
+
+
+/*** BANNIERE ***/
+h1
+{
+    font-size: 4rem;
+}
+
+
+#banniere
+{
+    background-image: url(../img/bg_header.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 75px;
+}
+
+#banniere p 
+{
+	padding-bottom: 50px;
+}
+
+#banniere a
+{
+    background-color: #ed2758;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+
+
+
+/***************** MAIN ******************/
+
+main
+{
+    text-align: center;
+}
+
+main section
+{
+    margin: 100px 0;
+}
+
+
+
+/*** COMPETENCES ***/
+h2 
+{
+    margin-top: 40px;
+    color: #ed2758;
+    font-size: 3.5rem;
+    border-bottom: 2px solid #e0e1e3;
+}
+
+#competences h3 
+{
+    font-size: 3rem;
+    color: #777;
+}
+
+#competences figure
+{
+    width: 33%;
+    margin: 0px;
+    display: inline-block;
+}
+
+
+
+/*** SERVICES ***/
+
+#services h3, #exemples h3
+{
+    color:#ed2758;
+}
+
+#services article
+{
+    width: 33%;
+    display: inline-block;
+}
+
+#services i
+{
+    font-size: 2.5rem;
+    background-color: #eff0f2;
+    border: 2px solid #e0e1e3;
+    width: 75px;
+    height: 75px;
+    line-height: 69px;
+    border-radius: 50%;   
+}
+
+#services i:hover
+{
+    -webkit-animation: bounce 0.35s ease infinite alternate;
+	        animation: bounce 0.35s ease infinite alternate;
+}
+
+@-webkit-keyframes bounce{
+	from{
+        -webkit-transform: translateY(0);
+        transform :translateY(0);
+    }
+    to{
+        -webkit-transform: translateY(-20px);
+        transform :translateY(-20px);
+    }
+}
+
+@keyframes bounce{
+	from{
+        -webkit-transform: translateY(0);
+        transform :translateY(0);
+    }
+    to{
+        -webkit-transform: translateY(-20px);
+        transform :translateY(-20px);
+    }
+}
+
+
+
+
+/*** EXEMPLES ***/
+#exemples img 
+{
+    width: 50%;
+}
+
+#exemples article
+{
+    text-align:justify;
+}
+
+
+#exemples article:nth-child(even) img {
+    float: right;
+    padding-left: 10px;
+}
+
+#exemples article:nth-child(odd) img {
+    float: left;
+    padding-right: 10px;
+}
+
+#exemples a{
+    text-decoration: none;
+    color: #ed2758;
+    clear: both;
+}
+
+
+
+/*** CONTACT ***/
+
+#contact p
+{
+    text-align: justify;
+}
+
+input, textarea
+{
+    padding: 20px 20px 20px 70px;
+    margin: 1%;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+	font-family: Arial;
+	font-size: 1.6rem;
+}
+
+input 
+{
+    width: 48%;
+    float: left;
+}
+
+input:first-of-type
+{
+    background-image: url(../img/bg_form_name.svg);
+    background-repeat: no-repeat;
+	background-size: 40px;
+	background-position: 10px;
+}
+
+input:nth-of-type(2) 
+{
+	background-image: url(../img/bg_form_mail.svg);
+	background-repeat: no-repeat;
+	background-size: 40px;
+	background-position: 10px;
+}
+
+textarea 
+{
+	width: 98%;
+	resize: none;
+	background-image: url(../img/bg_form_message.svg);
+	background-repeat: no-repeat;
+	background-size: 40px;
+	background-position: 10px;
+}
+
+button:hover
+{
+    cursor: pointer;
+}
+
+button
+{
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    margin: 25px 0;   
+}
+
+button[type="submit"]
+{
+    background-color: #ed2758;
+}
+
+button[type="reset"]
+{
+    background-color: #989898;
+}
+
+
+/********************** FOOTER ********************/
+
+/**** LICENCE ****/
+#licence 
+{
+    display: block;
+    text-align: center;
+    padding: 25px;
+}
+
+#licence img 
+{
+    width: 50px;
+}
+
+
+
+/*********************** RESPONSIVE *********************/
+
+
+@media screen and (max-width:1024px){
+
+    header
+    {
+        text-align: center;
+    }
+
+    header img 
+    {
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+	}
+
+    header nav 
+    {
+		float: none;
+    } 
+
+    main
+    {
+		padding: 25px;
+    } 
+    
+    #competences figure, #services article
+    {
+        width: 100%;
+    }
+
+    #services article + article
+    {
+        margin-top: 80px;
+    }
+    
+
+}
+
+
+@media screen and (max-width:767px){
+
+    html 
+    {
+		font-size: 50%;
+    }
+
+    #exemples article:nth-child(even) img, #exemples article:nth-child(odd) img
+    {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    input {
+		float: none;
+	}
+
+	input, textarea {
+		width: 100%;
+	}
+
+}
